@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 拖曳排序範例</title>
+    <!-- 引入外部 CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- link google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Macondo&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<h2>DiningCard</h2>
+
+<button id="add-column-btn">新增欄位</button>
+
+<div class="container" id="columns-container">
+    <div class="column" id="left-column">
+        <h3>左欄</h3>
+        <button class="add-item-btn">新增項目</button>
+        <ul class="sortable-list">
+            <li draggable="true">
+                菜單 1
+                <div class="input-fields">
+                    <label>食材: <input type="text" name="ingredient"></label>
+                    <label>用具: <input type="text" name="tool"></label>
+                    <label>時間: <input type="text" name="time"></label>
+                </div>
+            </li>
+            <li draggable="true">
+                菜單 2
+                <div class="input-fields">
+                    <label>食材: <input type="text" name="ingredient"></label>
+                    <label>用具: <input type="text" name="tool"></label>
+                    <label>時間: <input type="text" name="time"></label>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="column" id="center-column">
+        <h3>中間欄</h3>
+        <button class="add-item-btn">新增項目</button>
+        <ul class="sortable-list">
+            <li draggable="true">
+                菜單 1
+                <div class="input-fields">
+                    <label>食材: <input type="text" name="ingredient"></label>
+                    <label>用具: <input type="text" name="tool"></label>
+                    <label>時間: <input type="text" name="time"></label>
+                </div>
+            </li>
+            <li draggable="true">
+                菜單 2
+                <div class="input-fields">
+                    <label>食材: <input type="text" name="ingredient"></label>
+                    <label>用具: <input type="text" name="tool"></label>
+                    <label>時間: <input type="text" name="time"></label>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="column" id="right-column">
+        <h3>右欄</h3>
+        <button class="add-item-btn">新增項目</button>
+        <ul class="sortable-list">
+            <li draggable="true">
+                菜單 1
+                <div class="input-fields">
+                    <label>食材: <input type="text" name="ingredient"></label>
+                    <label>用具: <input type="text" name="tool"></label>
+                    <label>時間: <input type="text" name="time"></label>
+                </div>
+            </li>
+            <li draggable="true">
+                菜單 2
+                <div class="input-fields">
+                    <label>食材: <input type="text" name="ingredient"></label>
+                    <label>用具: <input type="text" name="tool"></label>
+                    <label>時間: <input type="text" name="time"></label>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- 引入外部 JavaScript -->
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
